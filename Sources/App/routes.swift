@@ -41,7 +41,7 @@ public func routes(_ router: Router) throws {
                 let a = try req.query.get(String.self, at: "a")
                 let b = try req.query.get(String.self, at: "b")
                 let c = try req.query.get(String.self, at: "c")
-                return Process.processTri(arg: [a,b,c])
+                return Process.processTri(arg  : [a,b,c])
             } else {
                 return noAPI
             }
