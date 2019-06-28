@@ -6,7 +6,7 @@ public func routes(_ router: Router) throws {
     var noAPI: String = "API Key not found"
     var invalidParam: String = "The request is invalid"
     
-    router.get("api", API.parameter) { req -> String in
+    router.get("api/173f78bf-bd39-47f9-ada0-14f14a4c6894", API.parameter) { req -> String in
         
         //http://localhost:8080/api/Fibonnaci?n=45&api_key=akejrbgakjergbakjerbg
         
@@ -41,7 +41,7 @@ public func routes(_ router: Router) throws {
                 let a = try req.query.get(String.self, at: "a")
                 let b = try req.query.get(String.self, at: "b")
                 let c = try req.query.get(String.self, at: "c")
-                return Process.processTri(arg  : [a,b,c])
+                return Process.processTri(arg  	: [a,b,c])
             } else {
                 return noAPI
             }
